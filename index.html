@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.jpg" type="imege/x-icon">
+    <title>Аніме режисери</title>
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>Аніме режисери</span>
+        </div>
+        <div>
+            <div id="about">
+                <a href="#" title="Про сайт" onclick="slowScroll('#main')">Про сайт</a>
+                <a href="#" title="Режисери" onclick="slowScroll('#overiew')">Режисери</a>
+            </div>
+        </div>
+    </header>
+
+    <div id="top">
+        <h1>Режисура аніме</h1>
+        <h3>Генії японської анімації та їх роботи</h3>
+    </div>
+
+    <div id="main">
+        <div class="intro">
+            <h2>Щастя - це образ мислення. (Калігула)</h2>
+            <span>Багато сайтів розповідають про кіно, серіали, мультфільми. Є нескінченна кількість рецензій на ці самі твори мистецтва.</span>
+        </div>
+        <div class="text">
+            <span>Але небагато людей говорять про тих, хто зробили ці фільми - режисерів. В Інтернеті достатньо інформації і відгуків до фільмів голівудських режисерів, але, на жаль, майже ніхто не приділяє уваги геніям японської анімації. Тому був сворений цей сайт.</span>
+        </div>
+    </div>
+
+    <div id="overview">
+        <h2>Режисери</h2>
+        <h4>іноватори анімації</h4>
+
+        <div class="img">
+            <img src="HayaoMiyazaki.jpg" alt="Хаяо Міядзакі">
+            <a href="pageHayaoMiyazaki/pageHayaoMiyazaki.html">Хаяо Міядзакі</a>
+        </div>
+        <div class="img">
+            <img src="MakotoShinkai.jpg" alt="Макото Сінкай">
+            <a href="pageMakotoShinkai/pageMakotoShinkai.html" alt="Макото Сінкай">Макото Сінкай</a>
+        </div>
+        <div class="img">
+            <img src="SatoshiKon.webp" alt="Сатоші Кон">
+            <a href="pageSatoshiKon/pageSatoshiKon.html" alt="Сатоші Кон">Сатоші Кон</a>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function slowScroll(id) {
+            $('html, body').animate({
+                scrollTop: $(id).offset().top
+            }, 500);
+        }
+
+        $(document).on("scroll", function () {
+            if($(window).scrollTop() === 0)
+                $("header").removeClass("fixed");
+            else
+                $("header").attr("class", "fixed");
+        })
+    </script>
+
+</body>
+</html>

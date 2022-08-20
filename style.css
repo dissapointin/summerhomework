@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #fafafa;
+    font-family: Trebuchet MS, Helvetica;
+}
+
+header {
+    width: 100%;
+    padding: 10px 0.5% 0px 0.5%;
+    background: transparent;
+    float: left; 
+    position: fixed;
+}
+
+header #logo {
+    color: #fff;
+    cursor: pointer; 
+}
+
+header #logo span {
+    font-size: 1.7em;
+    line-height: 45px;
+    margin-left: 40px;
+    font-family: 'Comfortaa', serif;
+}
+
+@media (min-width: 701px) {
+    #logo {
+        float: left;
+        width: 30%;
+        font-size: 1.1em;
+    }
+
+    #about {
+        float: right;
+        width: 67%;
+    }
+}
+
+@media (max-width: 700px) {
+    #logo {
+        margin-top: 10px;
+        width: 100%;
+        font-size: 1.5em;
+    }
+
+    #about {
+        float: left;
+        width: 100%;
+    }
+}
+
+#about {
+    text-align: center;
+    font-size: 1em;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+#about > a {color: #fff}
+
+#about > a:hover {
+    color: #b0b0b0;
+    text-decoration: underline;
+}
+
+#about > a:not(:last-child) {
+    margin-right: 7%;
+}
+
+/* Стилі для фіксованної шапки */
+
+.fixed {
+    z-index: 5000;
+    background-color: #fff;
+    border-bottom: 1px solid silver;
+}
+
+header.fixed #logo {
+    color: #343434;
+}
+
+.fixed #about a {color: #343434;}
+.fixed #about a:hover {color: #7c7c7c;}
+
+/* Головний блок на сайті */
+
+#top {
+    width: 100%;
+    height: 1000px;
+    background-image: url(SpiritedAway.jpeg);
+    background-blend-mode: multiply;
+    background-color: #2e3a44;
+    background-size: 100% auto;
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+}
+
+@media (min-width: 1001px) {
+    #top {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 651px) {
+    #top {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 650px) {
+    #top {
+        font-size: 1.3em;
+        padding-top: 50%;
+    }
+}
+
+#top h1 {
+    padding-top: 20%;
+}
+
+#top h3 {
+    color: #ccc;
+}
+
+/* Блок з можливостями */
+
+#main {
+    padding: 100px 20%;
+    width: 60%;
+    float: left;
+    background-color: #f6f6f6;
+    border-top: 2px solid silver;
+    color: #484848;
+    font-size: 1.3em;
+}
+
+#overview {
+    float: left;
+    background-image: url(https://i.pinimg.com/originals/0d/1f/a7/0d1fa77b1a83e109b2f123c13164b8fd.jpg);
+    background-blend-mode: multiply;
+    background-color:#4f1c75;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+#overview h2 {font-size: 4em}
+#overview span {color: #ccc; font-size: 1.5em;}
+
+#overview .img {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+    margin-top: 50px;
+}
+
+#overview .img:nth-child(odd) {
+    margin-left: 18%;
+}
+
+#overview .img img {
+    width: 200px;
+    background: #fafafa;
+    padding: 5px;
+    border: 2px solid silver;
+    float: left;
+    max-width: 500px;
+}
+
+#overview a {
+    float: left;
+    width: 100%;
+    font-size: 2em;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+@media (max-width: 700px) {
+    #overview .img {
+        width: 80%!important;
+        margin-right: 0!important;
+        margin-left: 10%!important;
+    }
+}
